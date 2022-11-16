@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOVIE API</title>
+  <script defer type="module" src="./main.js"></script>
+  <script src="https://kit.fontawesome.com/925f08a49e.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="./img/logo-netflix.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" sizes="60x60" href="./img/apple-icon.png">
+</head>
+<body>
+  <header>
+    <div class="search">
+      <div class="logo"><img src="./img/pngwing.com.png" alt="logo" onclick="location.href='index.html'"> </div>
+      <ul class="home-menu">
+        <li onclick="location.href='index.html'">홈</li>
+        <li onclick="location.href='detail.html'">영화</li>
+      </ul>
+      <ul class="profile-menu">
+        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+        <li><i class="fa-solid fa-bell"></i></li>
+        <li><img class="profile-img" src="./img/profile.png"></li>
+      </ul>
+    </div>
+    <section>
+      <div class="title">영화 찾아보기</div>
+      <div class="info">
+        <span>선호하는 설정을 선택하세요</span>
+        <div>
+          <input class="search-input" type="text" name="formname" placeholder="Search for Movies, Series & more">
+          <select class="type-select" name="genre" id="genre-select">
+            <option value="movie">movie</option>
+            <option value="series">series</option>
+            <option value="episode">episode</option>
+          </select>
+          <select class="count-select" name="count" id="count-select">
+            <option value="1">10</option>
+            <option value="2">20</option>
+            <option value="3">30</option>
+          </select>
+          <select class="year-select" name="year" id="year-select">
+            <option value="">All Years</option>
+          </select>
+          <button class="apply">Apply</button>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main>
+    <div class="movie-img">
+      <div class="loading" h-loader>
+        <svg viewBox="22.857142857142858 22.857142857142858 45.714285714285715 45.714285714285715">
+          <circle cx="45.714285714285715" cy="45.714285714285715" r="20" stroke-width="5.714285714285714" stroke-dasharray="125.664" stroke-dashoffset="125.66370614359172px"></circle>
+        </svg>
+      </div>
+    </div>
+    <!-- <div class="movie-detail">
+      <div class="movie-poster"><img src="" alt="영화 포스터"></div>
+      <div>
+        <div>영화 제목</div>
+        <div>몇년도 러닝타임 국가</div>
+        <span>영화 설명 블라블라</span>
+        <div>rating
+          <div>로고</div>
+          <div>평점</div>
+        </div>
+        <div>
+          배우
+          <span>who who who</span>
+        </div>
+        <div>
+          production
+          <span>who</span>
+        </div>
+        <div>genre</div>
+      </div>
+    </div> -->
+  </main>
+  <footer>
+    <div class="more-btn">
+      <button class="more">more</button>
+    </div>
+  </footer>
+</body>
+</html>

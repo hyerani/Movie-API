@@ -1,0 +1,282 @@
+@import url(./reset.css);
+
+body {
+  background-color: #141414;
+}
+
+/* 페이지 상단 */
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 120px;
+  width: 120px;
+  padding-left: 50px;
+  cursor: pointer;
+}
+
+.home-menu {
+  padding-left: 25px;
+}
+
+.home-menu > li {
+  display: inline-block;
+  color: #9e9e9e;
+  font-size: 15px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.home-menu > li:hover {
+  color: #6e6e70;
+}
+
+.profile-menu {
+  display: flex;
+  margin-left: auto;
+  margin-right: 70px;
+  align-items: center;
+}
+
+.profile-menu > li {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.profile-menu i {
+  color: white;
+  font-size: 20px;
+
+}
+
+.profile-img {
+  height: 35px;
+  width: 35px;
+  border-radius: 3px;
+}
+
+.title {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 350;
+  padding-left: 50px;
+  margin-left: 10px;
+  cursor: default;
+}
+
+/* 검색 기능 부분 */
+section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  padding-right: 50px;
+  display: flex;
+}
+
+.info > span {
+  color: #fff;
+  font-size: 13px;
+  padding-right: 10px;
+  align-self: center;
+  cursor: default;
+}
+
+input { 
+  -webkit-appearance : none;
+  -moz-appearance:none;
+  appearance:none;
+  color: #fff;
+  background-color: black;
+  border: 1px solid #fff;
+  width: 300px;
+  height: 25px;
+  font-weight: 400;
+  font-size: 13px;
+  padding-left: 10px;
+}
+  
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: #fff;
+  background-color: black;
+}
+
+input:hover {
+  outline: 1px solid #9e9e9e;
+}
+
+
+#genre-select {
+  background-color: black;
+  color: white;
+  height: 28px;
+  border: 1px solid white;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+#count-select {
+  background-color: black;
+  color: white;
+  height: 28px;
+  border: 1px solid white;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+#year-select {
+  background-color: black;
+  color: white;
+  height: 28px;
+  border: 1px solid white;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.apply {
+  background-color: black;
+  color: white;
+  height: 28px;
+  border: 1px solid white;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+
+ /* 영화 리스트 부분 */
+.id-el {
+  display: none;
+}
+
+.movie-img {
+  margin: 60px;
+  min-height: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #202020;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.movie-el {
+  width: 200px;
+  height: calc(200 * 3 / 2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+} 
+
+.movie-el div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  padding: 15px 0;
+  background-color: rgba(0, 0, 0, .3);
+  backdrop-filter: blur(5px);
+  color: white;
+  font-size: 20px;
+}
+
+
+.movie-el span {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  font-size: 14px;
+  color: orange;
+}
+
+.movie-el img {
+  width: 100%;
+  height: 100%;
+}
+
+.movie-el:hover {
+  transform: scale(1.07);
+  transition: all 200ms linear;
+  cursor: pointer;
+}
+
+
+/* 더보기 버튼 부분 */
+footer {
+  padding-bottom: 60px;
+}
+
+.more-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.more-btn > button {
+  font-size: 20px;
+  font-weight: 100;
+  padding: 5px 25px;
+  background-color: black;
+  color: white;
+  border: 0.5px solid white;
+}
+
+.more-btn > button:hover {
+  cursor: pointer;
+  background-color: #2c2c2f
+}
+
+
+/* 로딩 이미지 */
+[h-loader] {
+  width: 50px;
+  height: 50px;
+  color: white;
+  display: none;
+}
+svg {
+  animation: progress-circular-rotate 1.4s linear infinite;
+}
+circle {
+  animation: progress-circular-dash 1.4s ease-in-out infinite;
+  fill: transparent;
+  stroke-width: 4;
+  stroke-dasharray: 80, 200;
+  stroke-dashoffset: 0px;
+  stroke: currentColor;
+}
+@keyframes progress-circular-rotate {
+  to { transform: rotate(1turn); }
+}
+@keyframes progress-circular-dash { 
+  0% { 
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0px
+  } 
+  50% {
+    stroke-dasharray: 100, 200;
+    stroke-dashoffset: -15px
+  } 
+  to { 
+    stroke-dasharray: 100, 200;
+    stroke-dashoffset: -124px
+  }
+}
+
+/* 영화 상세정보 부분 */
+
+/* .movie-detail {
+  background-color: #202020;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 60px;
+  padding: 10px 200px;
+} */
