@@ -1,6 +1,6 @@
 # Movie-API 활용 영화 검색 사이트
 
-- 🎬 [배포 사이트](https://www.29cm.co.kr/home)
+- 🎬 [배포 사이트](https://hyerani.github.io/Movie-API/)
 
 <br>
 
